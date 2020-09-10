@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: website
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+---
+
+spring:
+  profiles: docker
+  application:
+    name: website
+  cloud:
+    consul:
+      host: consul
+      port: 8500
+    loadbalancer:
+      ribbon:
+        enabled: false
