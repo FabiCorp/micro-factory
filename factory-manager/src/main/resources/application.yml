@@ -3,7 +3,7 @@ spring:
     name: factory-manager
   cloud:
     consul:
-      host: consul
+      host: localhost
       port: 8500
     loadbalancer:
       ribbon:

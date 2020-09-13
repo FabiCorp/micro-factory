@@ -3,4 +3,4 @@ FROM openjdk:11-slim
 # USER spring:spring
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar", "-Dspring.profiles.active=docker"]
+ENTRYPOINT ["java","-jar", "-Dspring.profiles.active=docker", "/app.jar"]

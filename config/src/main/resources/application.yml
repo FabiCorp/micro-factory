@@ -3,7 +3,7 @@ spring:
     name: config
   cloud:
     consul:
-      host: consul
+      host: localhost
       port: 8500
     loadbalancer:
       ribbon:
