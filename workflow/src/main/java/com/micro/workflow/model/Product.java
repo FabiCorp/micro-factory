@@ -1,5 +1,7 @@
 package com.micro.workflow.model;
 
+import java.util.List;
+
 public interface Product {
     ProductType getProductType();
     float getTimeForCreation();
@@ -8,5 +10,6 @@ public interface Product {
     void setWorkStepCounter(int workStepCounter);
     void setCreationCost(float creationCost);
     void setTimeForCreation(float timeForCreation);
-    CreationStepService getCreationStep();
+    public void checkFinishedWorkStep(CreationStepType creationStepType);
+    List<CreationStep> getCreationStepList();
 }

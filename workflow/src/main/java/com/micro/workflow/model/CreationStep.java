@@ -7,12 +7,12 @@ import lombok.Setter;
 @Setter
 public class CreationStep {
     private final CreationStepType creationStepType;
-    private final double creationTime;
+    private final float creationTime;
     private boolean finishedStep;
 
-    public CreationStep(CreationStepType creationStepType, double time) {
+    public CreationStep(CreationStepType creationStepType, float creationTime) {
         this.creationStepType = creationStepType;
-        this.creationTime = time;
+        this.creationTime = creationTime;
         this.finishedStep = false;
     }
 }

@@ -16,8 +16,10 @@ public class RobotImpl implements Robot {
     }
 
     @Override
-    public Product processWorkStep(Product product) {
-        return null;
+    public Product processWorkStep(Product product, CreationStep creationStep) {
+        float updatedCreationTime = product.getTimeForCreation() + creationStep.getCreationTime();
+        product.setTimeForCreation(updatedCreationTime);
+        return product;
     }
 
 }
